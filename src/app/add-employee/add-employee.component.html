@@ -1,0 +1,32 @@
+<div class="col-md-6">
+    <h2 class="text-center">Add Employee</h2>
+    <form>
+        <div class="form-group">
+        <ul>
+            <li *ngFor="let error of error_message">
+              {{ error }}
+            </li>
+          </ul>
+        </div>
+      <div class="form-group">
+        <label for="name">First Name:</label>
+        <input type="name" [(ngModel)]="user.firstName" placeholder="First Name" name="firstName" class="form-control" id="firstName">
+      </div>
+
+      <div class="form-group">
+        <label for="name">Last Name:</label>
+        <input type="name" [(ngModel)]="user.lastName" placeholder="Last Name" name="lastName" class="form-control" id="lastName">
+      </div>
+
+      <div class="form-group">
+        <label for="name">Email:</label>
+        <input type="email" [(ngModel)]="user.email" placeholder="email" name="email" class="form-control" id="email">
+      </div>
+    
+      <div class="form-group">
+        <label for="name">Phone Number:</label>
+        <input type="name" [(ngModel)]="user.phoneNumber" placeholder="phone Number" name="phoneNumber" class="form-control" id="phoneNumber">
+      </div> 
+      <button class="btn btn-success" (click)="createEmployee()">Create</button>
+    </form>
+    </div>
